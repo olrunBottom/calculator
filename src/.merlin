@@ -1,0 +1,4 @@
+S rolib/**
+S test/**
+B _build/**
+PKG oUnit

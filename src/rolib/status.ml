@@ -94,3 +94,8 @@ module StatusUpEffect = struct
     |> List.fold_left local status
 
 end
+
+module Aspd = struct
+
+
+end
