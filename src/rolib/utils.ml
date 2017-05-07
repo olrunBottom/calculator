@@ -22,6 +22,7 @@ module Value : sig
   val ratio : t -> t
   val zero: t
   val one : t
+  val show : t -> string
 end = struct
   type vunit = Point| Ratio
   type t = { left: float; right: float; vunit: vunit }
@@ -47,6 +48,7 @@ end = struct
   let ratio v = { v with vunit = Ratio }
   let zero = pairOf ( 0.0, 0.0)
   let one = pairOf ( 1.0, 1.0)
+  let show v = Printf.sprintf "left=%f,right=%f" v.left v.right
 end
 
 module XList = struct

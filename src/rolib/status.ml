@@ -21,21 +21,22 @@ type t = {
 
 type statusType = STR | AGI | VIT | INT | DEX | LUK | ATK | MATK | HIT | CRYTICAL | DEF | MDEF | FLEE | ASPD
 
-let initial = {
-  str = Value.one;
-  agi = Value.one;
-  vit = Value.one;
-  int = Value.one;
-  dex = Value.one;
-  luk = Value.one;
-  atk = Value.one;
-  matk = Value.one;
-  hit = Value.one;
-  crytical = Value.one;
-  def = Value.one;
-  mdef = Value.one;
-  flee = Value.one;
-  aspd = Value.one;
+let initial =
+  let v = Value.pairOf (1.0, 0.0) in {
+  str = v;
+  agi = v;
+  vit = v;
+  int = v;
+  dex = v;
+  luk = v;
+  atk = Value.one; (* ?? *)
+  matk = Value.one; (* ?? *)
+  hit = Value.one; (* ?? *)
+  crytical = Value.one; (* ?? *)
+  def = Value.one; (* ?? *)
+  mdef = Value.one; (* ?? *)
+  flee = Value.one; (* ?? *)
+  aspd = Value.one; (* ?? *)
  }
 
 module StatusUpEffect = struct

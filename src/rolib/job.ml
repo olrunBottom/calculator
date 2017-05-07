@@ -12,3 +12,5 @@ type t = {
   jtype : jobType;
   level : int;
 }
+
+let wrap t l = { jtype = t; level = l }

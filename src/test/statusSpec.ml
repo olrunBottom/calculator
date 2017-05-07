@@ -9,7 +9,7 @@ let aspd_up_20per = wrap ASPD (Value.floatOf 0.2)
 
 let addEffect1 _ =
   let status' = apply [agi_up_10] status in
-  assert_equal (1.0, 11.0) (Value.toPair status'.agi)
+  assert_equal ~printer:Value.show (Value.pairOf (1.0, 10.0)) status'.agi
 
 let extractEffect1 _ =
   let extracted = extract [agi_up_10; `TheOtherEffect] in

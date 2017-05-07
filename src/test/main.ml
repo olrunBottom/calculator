@@ -4,7 +4,8 @@ open OUnit2
 let suite =
   "suite" >::: [
     "statusSpec" >::: StatusSpec.tests
-  ; "elementSpec" >::: ElementSpec.tests
+    ; "elementSpec" >::: ElementSpec.tests
+    ; "jobSpec" >::: JobSpec.tests
   ]
 
 let () =
